@@ -1,0 +1,284 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+  :root{
+    --color-primary: #efefef;
+    --color-secundary: rgba(255, 255, 255);
+    --font-1: 1.3rem;
+    --font-2: 1.6rem;
+    --size-1: 0.8rem;
+    --size-2: 1.6rem;
+    --space-1: 0.5rem;
+    --space-2: 1rem;
+    --space-3: 1.5rem;
+  }
+  img{
+    max-width: 100%;
+    display: block;
+  }
+  body{
+    font-family: roboto;
+    background-color: var(--color-primary);
+  }
+  #wrapper{
+    display: grid;
+    grid-template-rows: 60px 1fr;
+  }
+  .h_bg{
+    background: var(--color-secundary);
+  }
+  header{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: var(--space-1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .h_logo{
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+  .logo{
+    width: 110px;
+  }
+  .change{
+     font-size: var(--size-2);
+  }
+  .change span{
+     transform: translateX(180px) rotate(160deg);
+  }
+  .search{
+    width: 200px;
+    position: relative;
+  }
+  .search input{
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px 10px 10px 40px;
+    border: none;
+    background: var(--color-primary);
+    outline: none;
+  }
+  .search i{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 1rem;
+    color: gray;
+  }
+  .user_perfil{
+    display: flex;
+    align-items: center;
+  }
+  .icons{
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .icons i{
+    cursor: pointer;
+  }
+  i{
+    font-size: var(--font-1);
+  }
+  .msg{
+    position: relative;
+    
+  }
+  .msg::after{
+    content: '10';
+    position: absolute;
+    font-size: 0.7rem;
+    top: -10px;
+    right: -12px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-weight: bold;
+    background: red;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+  }
+  
+  .perfil_circle{
+    width: 25px;
+    height: 25px;
+    clip-path: circle();
+    background: tomato;
+  }
+  .main_wrapper{
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: calc(100vh - 60px);
+  /*   background: green; */
+    width: 100%;
+  }
+  .side_1{
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    gap: var(--space-3);
+  /*   background: blue; */
+    padding: var(--space-3);
+  }
+  .storie_wrapper{
+    width: 100%;
+    display: flex;
+    gap: var(--space-2);
+    align-items: center;
+    justify-content: space-around;
+    overflow-x: auto;
+    background: var(--color-secundary); 
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 1px 1px 3px #d8d8d8, -1px -1px 2px #d8d8d8; 
+  }
+  
+  .storie_wrapper::before{
+    content: '←';
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-secundary);   position: absolute;
+    left: 25px;
+    top: 20px;
+    border: 1px solid #d6d6d6;
+    z-index: 1;
+  }
+  .storie_wrapper::after{
+    content: '→';
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-secundary);
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    border: 1px solid #d6d6d6;
+  }
+  ::-webkit-scrollbar-track {
+      background-color: #F4F4F4;
+  }
+  ::-webkit-scrollbar {
+      width: 6px;
+      background: #F4F4F4;
+  }
+  ::-webkit-scrollbar-thumb {
+      background: #dad7d7;
+  }
+  .storie{
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    
+  }
+  .circle_storie{
+    width: 49px;
+    height: 50px;
+    clip-path:circle();
+    background: tomato;
+  }
+  .blue{
+    background: lightblue;
+  }
+  .green{
+    background: lightgreen;
+  }
+  .publi{
+    display: grid;
+    grid-template-rows: 60px 1fr;
+    background: var(--color-secundary);
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px #d8d8d8, -1px -1px 2px #d8d8d8; 
+  }
+  .circle_publi{
+    width: 30px;
+    height: 30px;
+    clip-path:circle();
+    background: tomato;
+  }
+  .h_publi{
+    display: flex;
+    align-items: center;
+    padding: var(--space-1);
+    justify-content: space-between;
+    border-bottom: 1px solid #d6d6d6;
+  }
+  .perfil_publi{
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+  }
+  .photo_coments_publi{
+    display: grid;
+    grid-template-rows: 1fr 50px;
+  }
+  .photo_publi{
+    background-image: url('https://img.freepik.com/fotos-gratis/lobo-eurasiatico-em-habitat-de-inverno-branco-bela-floresta-de-inverno_475641-702.jpg?w=2000');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .icons_publi_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-2);
+  }
+  .icons_publi{
+    display: flex;
+    gap: var(--space-2);
+  }
+  .side_2{
+    padding: var(--space-3);
+    width: 350px;
+    justify-self: center;
+  /*   background: blue; */
+  }
+  .circle_right{
+    height: 60px;
+    width: 60px;
+    background: tomato;
+    clip-path: circle();
+  }
+  .perfil_right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .info_flex{
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+  .sugestoes{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+  }
+  .circle_right_2{
+    height: 40px;
+    width: 40px;
+    clip-path: circle();
+    background: lightblue;
+  }
+  .space_right{
+    display: grid;
+    gap: var(--space-2);
+  }
